@@ -1,0 +1,7 @@
+{
+  "uuid": "service-status@henrique",
+  "name": "Service Status",
+  "description": "Indicador no painel com o status de serviços externos (SEFAZ, Cloudflare e outros), alimentado por um coletor em Python.",
+  "shell-version": ["45", "46", "47", "48", "49", "50", "51"],
+  "url": "https://github.com/henriquemboeira-rgb/service-status"
+}

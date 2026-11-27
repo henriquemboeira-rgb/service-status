@@ -1,0 +1,13 @@
+.ss-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin: 0 6px;
+}
+.ss-ok       { background-color: #33d17a; }
+.ss-degraded { background-color: #f6d32d; }
+.ss-down     { background-color: #e01b24; }
+.ss-unknown  { background-color: #9a9996; }
+
+.ss-nome    { font-weight: bold; margin-right: 8px; }
+.ss-detalhe { font-size: 0.9em; }

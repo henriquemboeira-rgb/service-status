@@ -1,0 +1,7 @@
+[Unit]
+Description=Coletor do Service Status (verifica serviços externos)
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/share/service-status/venv/bin/python %h/.local/share/service-status/collector/collector.py
+TimeoutStartSec=90

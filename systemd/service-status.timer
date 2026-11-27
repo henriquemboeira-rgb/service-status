@@ -1,0 +1,12 @@
+[Unit]
+Description=Executa o coletor do Service Status periodicamente
+
+[Timer]
+# Primeira execução 10 s após o timer ser ativado (login), depois a cada 60 s
+OnActiveSec=10s
+OnUnitActiveSec=60s
+AccuracySec=5s
+Unit=service-status.service
+
+[Install]
+WantedBy=timers.target

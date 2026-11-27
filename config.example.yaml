@@ -1,0 +1,36 @@
+# Configuração do coletor. O install.sh copia para ~/.config/service-status/config.yaml.
+
+# Intervalo do timer do systemd. A extensão usa esse valor para detectar
+# dados desatualizados (sem atualização há mais de 3 intervalos).
+interval_seconds: 60
+
+# Timeout de cada requisição de rede, em segundos.
+timeout_seconds: 8
+
+services:
+  # Status page da Cloudflare, filtrando só os componentes que interessam.
+  # O filtro compara por trecho do nome, sem diferenciar maiúsculas.
+  - id: cloudflare
+    name: Cloudflare
+    type: statuspage
+    url: https://www.cloudflarestatus.com/api/v2/summary.json
+    components: ["(GRU)", "(POA)"]
+    probe: {host: 1.0.0.1, port: 443}
+
+  # Sem filtro de componentes, usa o indicador geral da status page.
+  - id: github
+    name: GitHub
+    type: statuspage
+    url: https://www.githubstatus.com/api/v2/summary.json
+
+  # SEFAZ pelo painel público do Portal Nacional da NF-e (sem certificado).
+  # autorizador: sigla da linha do painel (RS tem linha própria; vários estados
+  # usam SVRS ou SVAN). O painel atualiza a cada ~5 min, então não adianta
+  # consultar mais rápido que isso.
+  - id: sefaz-rs
+    name: SEFAZ RS NF-e
+    type: sefaz_portal
+    autorizador: RS
+    min_interval_seconds: 300
+    # Opcional: considerar só algumas colunas (nome como aparece no cabeçalho do painel).
+    # colunas: ["Autorização4", "Retorno Autorização4"]
