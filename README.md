@@ -63,7 +63,7 @@ Como o portal não oferece API, o check faz scraping da tabela HTML: localiza a 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/henriquemboeira-rgb/service-status.git
+   git clone https://github.com/SEU_USUARIO/service-status.git
    cd service-status
    ```
 
@@ -93,8 +93,13 @@ bash uninstall.sh                               # remove tudo (mantém a configu
 
 ## 5. Demonstração
 
-* `docs/painel.png`: bolinha no painel e menu aberto com os serviços
-* `docs/telegram.png`: alerta de mudança recebido no celular
+*Indicador no painel com o menu aberto:*
+
+![Indicador no painel do GNOME](docs/painel.png)
+
+*Alerta recebido no Telegram:*
+
+![Alerta no Telegram](docs/telegram.png)
 
 
 ## 6. Melhorias futuras (roadmap)
