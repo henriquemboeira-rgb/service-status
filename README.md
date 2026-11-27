@@ -93,13 +93,13 @@ bash uninstall.sh                               # remove tudo (mantém a configu
 
 ## 5. Demonstração
 
-*Indicador no painel com o menu aberto:*
+**Indicador no painel com o menu aberto:**
 
-![Indicador no painel do GNOME](docs/painel.png)
+<img src="docs/painel.png" alt="Indicador no painel do GNOME" width="600">
 
-*Alerta recebido no Telegram:*
+**Alerta recebido no Telegram:**
 
-![Alerta no Telegram](docs/telegram.png)
+<img src="docs/telegram.png" alt="Alerta no Telegram" width="400">
 
 
 ## 6. Melhorias futuras (roadmap)
